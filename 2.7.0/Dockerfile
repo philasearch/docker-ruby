@@ -15,15 +15,11 @@ RUN apt-get install -y libqtwebkit4 libqt4-dev xvfb
 RUN apt-get install -y nodejs
 
 # install firefox
-RUN apt-get install -y libffi-dev firefox
+RUN apt-get install -y libffi-dev firefox-esr
 
-#RUN wget "https://github.com/mozilla/geckodriver/archive/v0.26.0.tar.gz"
-
-#RUN tar -zxvf v0.26.0.tar.gz
-
-#RUN chmod +x geckodriver
-
-#RUN mv geckodriver /usr/local/bin
-
-#RUN rm v0.26.0.tar.gz
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz && \
+    tar -zxvf geckodriver-v0.26.0-linux64.tar.gz && \
+    chmod +x geckodriver && \
+    mv geckodriver /usr/local/bin && \
+    rm geckodriver-v0.26.0-linux64.tar.gz
 
