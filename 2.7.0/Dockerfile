@@ -20,6 +20,6 @@ RUN apt-get install -y libffi-dev firefox-esr
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz && \
     tar -zxvf geckodriver-v0.26.0-linux64.tar.gz && \
     chmod +x geckodriver && \
-    mv geckodriver /usr/local/bin && \
-    rm geckodriver-v0.26.0-linux64.tar.gz
+    mv geckodriver /usr/local/bin 
+#    rm geckodriver-v0.26.0-linux64.tar.gz
 
